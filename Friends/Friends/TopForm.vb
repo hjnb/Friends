@@ -12,6 +12,12 @@
 
     Private kaihiForm As 収支表会費
 
+    ''' <summary>
+    ''' loadイベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
     Private Sub TopForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         '管理者パスワードフォーム表示
         'Dim passForm As Form = New passwordForm(iniFilePath, 1)

@@ -23,9 +23,9 @@ Partial Class 収支表会費
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dateBox = New ymdBox.ymdBox()
-        Me.TxtBox = New System.Windows.Forms.TextBox()
-        Me.NinBox = New System.Windows.Forms.TextBox()
-        Me.InBox = New System.Windows.Forms.TextBox()
+        Me.txtBox = New System.Windows.Forms.TextBox()
+        Me.ninBox = New System.Windows.Forms.TextBox()
+        Me.inBox = New System.Windows.Forms.TextBox()
         Me.outBox = New System.Windows.Forms.TextBox()
         Me.btnRegist = New System.Windows.Forms.Button()
         Me.btnDelete = New System.Windows.Forms.Button()
@@ -40,45 +40,56 @@ Partial Class 収支表会費
         '
         'dateBox
         '
-        Me.dateBox.boxType = 0
+        Me.dateBox.boxType = 1
         Me.dateBox.DateText = ""
         Me.dateBox.EraLabelText = "R01"
         Me.dateBox.EraText = ""
-        Me.dateBox.Location = New System.Drawing.Point(18, 30)
+        Me.dateBox.Location = New System.Drawing.Point(18, 21)
         Me.dateBox.MonthLabelText = "06"
         Me.dateBox.MonthText = ""
         Me.dateBox.Name = "dateBox"
-        Me.dateBox.Size = New System.Drawing.Size(86, 20)
+        Me.dateBox.Size = New System.Drawing.Size(112, 30)
         Me.dateBox.TabIndex = 0
         Me.dateBox.textReadOnly = False
         '
-        'TxtBox
+        'txtBox
         '
-        Me.TxtBox.Location = New System.Drawing.Point(56, 74)
-        Me.TxtBox.Name = "TxtBox"
-        Me.TxtBox.Size = New System.Drawing.Size(166, 19)
-        Me.TxtBox.TabIndex = 1
+        Me.txtBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.txtBox.ImeMode = System.Windows.Forms.ImeMode.Hiragana
+        Me.txtBox.Location = New System.Drawing.Point(55, 72)
+        Me.txtBox.Name = "txtBox"
+        Me.txtBox.Size = New System.Drawing.Size(174, 21)
+        Me.txtBox.TabIndex = 1
         '
-        'NinBox
+        'ninBox
         '
-        Me.NinBox.Location = New System.Drawing.Point(272, 74)
-        Me.NinBox.Name = "NinBox"
-        Me.NinBox.Size = New System.Drawing.Size(34, 19)
-        Me.NinBox.TabIndex = 2
+        Me.ninBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.ninBox.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.ninBox.Location = New System.Drawing.Point(272, 72)
+        Me.ninBox.Name = "ninBox"
+        Me.ninBox.Size = New System.Drawing.Size(34, 21)
+        Me.ninBox.TabIndex = 2
+        Me.ninBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'InBox
+        'inBox
         '
-        Me.InBox.Location = New System.Drawing.Point(352, 74)
-        Me.InBox.Name = "InBox"
-        Me.InBox.Size = New System.Drawing.Size(71, 19)
-        Me.InBox.TabIndex = 3
+        Me.inBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.inBox.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.inBox.Location = New System.Drawing.Point(352, 72)
+        Me.inBox.Name = "inBox"
+        Me.inBox.Size = New System.Drawing.Size(71, 21)
+        Me.inBox.TabIndex = 3
+        Me.inBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'outBox
         '
-        Me.outBox.Location = New System.Drawing.Point(466, 74)
+        Me.outBox.Font = New System.Drawing.Font("MS UI Gothic", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(128, Byte))
+        Me.outBox.ImeMode = System.Windows.Forms.ImeMode.Disable
+        Me.outBox.Location = New System.Drawing.Point(466, 72)
         Me.outBox.Name = "outBox"
-        Me.outBox.Size = New System.Drawing.Size(71, 19)
+        Me.outBox.Size = New System.Drawing.Size(71, 21)
         Me.outBox.TabIndex = 4
+        Me.outBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
         'btnRegist
         '
@@ -146,10 +157,10 @@ Partial Class 収支表会費
         'dgvKZan
         '
         Me.dgvKZan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvKZan.Location = New System.Drawing.Point(19, 160)
+        Me.dgvKZan.Location = New System.Drawing.Point(19, 156)
         Me.dgvKZan.Name = "dgvKZan"
         Me.dgvKZan.RowTemplate.Height = 21
-        Me.dgvKZan.Size = New System.Drawing.Size(518, 233)
+        Me.dgvKZan.Size = New System.Drawing.Size(518, 242)
         Me.dgvKZan.TabIndex = 12
         '
         '収支表会費
@@ -166,9 +177,9 @@ Partial Class 収支表会費
         Me.Controls.Add(Me.btnDelete)
         Me.Controls.Add(Me.btnRegist)
         Me.Controls.Add(Me.outBox)
-        Me.Controls.Add(Me.InBox)
-        Me.Controls.Add(Me.NinBox)
-        Me.Controls.Add(Me.TxtBox)
+        Me.Controls.Add(Me.inBox)
+        Me.Controls.Add(Me.ninBox)
+        Me.Controls.Add(Me.txtBox)
         Me.Controls.Add(Me.dateBox)
         Me.Name = "収支表会費"
         Me.Text = "収支表(会費)"
@@ -178,9 +189,9 @@ Partial Class 収支表会費
 
     End Sub
     Friend WithEvents dateBox As ymdBox.ymdBox
-    Friend WithEvents TxtBox As System.Windows.Forms.TextBox
-    Friend WithEvents NinBox As System.Windows.Forms.TextBox
-    Friend WithEvents InBox As System.Windows.Forms.TextBox
+    Friend WithEvents txtBox As System.Windows.Forms.TextBox
+    Friend WithEvents ninBox As System.Windows.Forms.TextBox
+    Friend WithEvents inBox As System.Windows.Forms.TextBox
     Friend WithEvents outBox As System.Windows.Forms.TextBox
     Friend WithEvents btnRegist As System.Windows.Forms.Button
     Friend WithEvents btnDelete As System.Windows.Forms.Button
