@@ -41,6 +41,10 @@ Public Class 収支表会費
     ''' <param name="e"></param>
     ''' <remarks></remarks>
     Private Sub 収支表会費_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+        '位置設定
+        Me.Left = DirectCast(Me.Owner, TopForm).Left + 5
+        Me.Top = DirectCast(Me.Owner, TopForm).Top + 60
+
         '現在日付設定
         dateBox.setADStr(DateTime.Now.ToString("yyyy/MM/dd"))
 

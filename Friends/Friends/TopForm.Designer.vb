@@ -24,15 +24,16 @@ Partial Class TopForm
     Private Sub InitializeComponent()
         Me.menuItem = New System.Windows.Forms.MenuStrip()
         Me.収支表ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.終了ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.会費ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.積立金ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.会費ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.終了ToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.会員マスタToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.menuItem.SuspendLayout()
         Me.SuspendLayout()
         '
         'menuItem
         '
-        Me.menuItem.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.収支表ToolStripMenuItem, Me.終了ToolStripMenuItem})
+        Me.menuItem.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.会員マスタToolStripMenuItem, Me.収支表ToolStripMenuItem, Me.終了ToolStripMenuItem})
         Me.menuItem.Location = New System.Drawing.Point(0, 0)
         Me.menuItem.Name = "menuItem"
         Me.menuItem.Size = New System.Drawing.Size(691, 24)
@@ -46,23 +47,29 @@ Partial Class TopForm
         Me.収支表ToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.収支表ToolStripMenuItem.Text = "収支表"
         '
+        '積立金ToolStripMenuItem
+        '
+        Me.積立金ToolStripMenuItem.Name = "積立金ToolStripMenuItem"
+        Me.積立金ToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.積立金ToolStripMenuItem.Text = "積立金"
+        '
+        '会費ToolStripMenuItem
+        '
+        Me.会費ToolStripMenuItem.Name = "会費ToolStripMenuItem"
+        Me.会費ToolStripMenuItem.Size = New System.Drawing.Size(110, 22)
+        Me.会費ToolStripMenuItem.Text = "会費"
+        '
         '終了ToolStripMenuItem
         '
         Me.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem"
         Me.終了ToolStripMenuItem.Size = New System.Drawing.Size(43, 20)
         Me.終了ToolStripMenuItem.Text = "終了"
         '
-        '会費ToolStripMenuItem
+        '会員マスタToolStripMenuItem
         '
-        Me.会費ToolStripMenuItem.Name = "会費ToolStripMenuItem"
-        Me.会費ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.会費ToolStripMenuItem.Text = "会費"
-        '
-        '積立金ToolStripMenuItem
-        '
-        Me.積立金ToolStripMenuItem.Name = "積立金ToolStripMenuItem"
-        Me.積立金ToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.積立金ToolStripMenuItem.Text = "積立金"
+        Me.会員マスタToolStripMenuItem.Name = "会員マスタToolStripMenuItem"
+        Me.会員マスタToolStripMenuItem.Size = New System.Drawing.Size(70, 20)
+        Me.会員マスタToolStripMenuItem.Text = "会員マスタ"
         '
         'TopForm
         '
@@ -85,5 +92,6 @@ Partial Class TopForm
     Friend WithEvents 終了ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 会費ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents 積立金ToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents 会員マスタToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

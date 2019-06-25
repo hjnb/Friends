@@ -10,7 +10,9 @@
     '.iniファイルのパス
     Public iniFilePath As String = My.Application.Info.DirectoryPath & "\Friends.ini"
 
+    '各フォーム
     Private kaihiForm As 収支表会費
+    Private kaiMFrom As 会員マスタ
 
     ''' <summary>
     ''' loadイベント
@@ -68,6 +70,24 @@
             kaihiForm = New 収支表会費()
             kaihiForm.Owner = Me
             kaihiForm.Show()
+        Else
+            kaihiForm.Focus()
+        End If
+    End Sub
+
+    ''' <summary>
+    ''' 会員マスタメニュー選択
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    ''' <remarks></remarks>
+    Private Sub 会員マスタToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles 会員マスタToolStripMenuItem.Click
+        If IsNothing(kaiMFrom) OrElse kaiMFrom.IsDisposed Then
+            kaiMFrom = New 会員マスタ()
+            kaiMFrom.Owner = Me
+            kaiMFrom.Show()
+        Else
+            kaiMFrom.Focus()
         End If
     End Sub
 End Class

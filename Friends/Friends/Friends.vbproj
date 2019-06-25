@@ -104,6 +104,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Util.vb" />
+    <Compile Include="会員マスタ.Designer.vb">
+      <DependentUpon>会員マスタ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="会員マスタ.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="収支表会費.Designer.vb">
       <DependentUpon>収支表会費.vb</DependentUpon>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TopForm.resx">
       <DependentUpon>TopForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="会員マスタ.resx">
+      <DependentUpon>会員マスタ.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="収支表会費.resx">
       <DependentUpon>収支表会費.vb</DependentUpon>
