@@ -22,10 +22,11 @@
     ''' <remarks></remarks>
     Private Sub TopForm_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
         '管理者パスワードフォーム表示
-        'Dim passForm As Form = New passwordForm(iniFilePath, 1)
-        'If passForm.ShowDialog() <> Windows.Forms.DialogResult.OK Then
-        '    Return
-        'End If
+        Dim passForm As Form = New passwordForm(iniFilePath, 1)
+        If passForm.ShowDialog() <> Windows.Forms.DialogResult.OK Then
+            Me.Close()
+            Return
+        End If
 
         'データベース、エクセル、構成ファイルの存在チェック
         If Not System.IO.File.Exists(dbFilePath) Then
